@@ -1,0 +1,313 @@
+﻿<Window x:Class="agregaritemsimpresoraslocal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:agregaritemsimpresoraslocal"
+        mc:Ignorable="d"
+        Title="EditarItemsImpresoras3D" Height="800" Width="960" WindowStartupLocation="CenterScreen" Icon="Untitled-1.ico">
+    <Grid>
+        <TabControl Margin="10">
+
+
+            <TabItem
+                Name="TabMarca"
+                Header="MARCA/MODELO">
+                <Grid
+                    Background="#FFE5E5E5"
+                    Margin="0,0,0,2">
+                    <DataGrid
+                        Name="dgMarcas"
+                        Margin="10,10,10,38"
+                        AutoGenerateColumns="False"
+                        IsReadOnly="True"
+                        SelectionMode="Single"
+                        ColumnWidth="*"
+                        SelectionChanged="dgMarcas_SelectionChanged"
+                        HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn
+                                Header="ID MARCA/MODELO"
+                                Binding="{Binding IdMarca}"
+                                MaxWidth="100" />
+                            <DataGridTextColumn
+                                Header="MARCA/MODELO"
+                                Binding="{Binding Marca}"
+                                MaxWidth="100" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox
+                        Name="tbDescMarca"
+                        HorizontalAlignment="Right"
+                        Height="23"
+                        Margin="0,0,90,10"
+                        TextWrapping="Wrap"
+                        Text="Marca..."
+                        VerticalAlignment="Bottom"
+                        Width="235" />
+                    <Button
+                        Name="btnAgregarMarca"
+                        Content="Agregar"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,10,10"
+                        VerticalAlignment="Bottom"
+                        Width="75"
+                        Click="btnAgregarMarca_Click"
+                        Height="23" />
+                    <Button
+                        x:Name="btnBorrarMarca"
+                        Content="Borrar"
+                        HorizontalAlignment="Left"
+                        Margin="94,0,0,10"
+                        VerticalAlignment="Bottom"
+                        Width="75"
+                        Click="btnBorrarMarca_Click"
+                        Height="23" />
+                    <Button
+                        x:Name="btnEditarMarca"
+                        Content="Editar"
+                        HorizontalAlignment="Left"
+                        Margin="174,0,0,10"
+                        VerticalAlignment="Bottom"
+                        Width="75"
+                        Click="btnEditarMarca_Click"
+                        Height="23" />
+                    <Button
+                        x:Name="btnCargarMarca"
+                        Content="Cargar Marcas"
+                        HorizontalAlignment="Left"
+                        Margin="10,0,0,10"
+                        VerticalAlignment="Bottom"
+                        Width="79"
+                        Click="btnCargarMarcas_Click"
+                        Height="23" />
+                </Grid>
+            </TabItem>
+
+
+            <!--<TabItem
+                Name="TabModelo"
+                Header="MODELO">
+                <Grid
+                    Background="#FFE5E5E5"
+                    Margin="0,0,0,2">
+                    <DataGrid
+                        Name="dgModelos"
+                        Margin="10,10,10,38"
+                        AutoGenerateColumns="False"
+                        IsReadOnly="True"
+                        SelectionMode="Single"
+                        ColumnWidth="*"
+                        SelectionChanged="dgModelos_SelectionChanged"
+                        HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn
+                                Header="ID MODELO"
+                                Binding="{Binding IdModelo}"
+                                MaxWidth="100" />
+                            <DataGridTextColumn
+                                Header="ID MARCA"
+                                Binding="{Binding FK_IdMarca}"
+                                MaxWidth="100" />
+                            <DataGridTextColumn
+                                Header="MODELO"
+                                Binding="{Binding Modelo}"
+                                MaxWidth="150" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox
+                        Name="tbDescModelo"
+                        HorizontalAlignment="Right"
+                        Height="23"
+                        Margin="0,0,90,10"
+                        TextWrapping="Wrap"
+                        Text="Descripción de Modelo..."
+                        VerticalAlignment="Bottom"
+                        Width="235" />
+                    <Button
+                        Name="btnAgregarModelo"
+                        Content="Agregar"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,10,10"
+                        VerticalAlignment="Bottom"
+                        Width="75"
+                        Click="btnAgregarModelo_Click"
+                        Height="23" />
+                    <ComboBox
+                        Name="cbMarcas"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,330,10"
+                        VerticalAlignment="Bottom"
+                        Width="184"
+                        SelectedIndex="0"
+                        Height="23" />
+                    <Button
+                        x:Name="btnBorrarModelo"
+                        Content="Borrar"
+                        HorizontalAlignment="Left"
+                        Margin="110,0,0,10"
+                        VerticalAlignment="Bottom"
+                        Width="75"
+                        Click="btnBorrarModelo_Click"
+                        Height="23" />
+                    <Button
+                        x:Name="btnEditarModelo"
+                        Content="Editar"
+                        HorizontalAlignment="Left"
+                        Margin="190,0,0,10"
+                        VerticalAlignment="Bottom"
+                        Width="75"
+                        Click="btnEditarModelo_Click"
+                        Height="23" />
+                    <Button
+                        x:Name="btnCargarModelos"
+                        Content="Cargar Modelos"
+                        HorizontalAlignment="Left"
+                        Margin="10,0,0,10"
+                        VerticalAlignment="Bottom"
+                        Width="95"
+                        Click="btnCargarModelos_Click"
+                        Height="23" />
+                </Grid>
+            </TabItem>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <TabItem Name="TabINT" Header="INT">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dgINTs" Margin="10,10,10,39" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn
+                                Header="ID MARCA"
+                                Binding="{Binding FK_IdMarca}" />
+                            <DataGridTextColumn Header="ID INT" Binding="{Binding IdINT}"/>
+                            <DataGridTextColumn Header="DESCRIPCION INT" Binding="{Binding DescripcionINT}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnAgregarINT" Content="Agregar" HorizontalAlignment="Right" Margin="0,0,12,10" VerticalAlignment="Bottom" Width="75" Click="BtnAgregarINT_Click" Height="24"/>
+                    <Button x:Name="btnBorrarINT" Content="Borrar" HorizontalAlignment="Left" Margin="170,0,0,9" VerticalAlignment="Bottom" Width="75" Click="BtnBorrarINT_Click" Height="24"/>
+                    <Button x:Name="btnEditarINT" Content="Editar" HorizontalAlignment="Left" Margin="90,0,0,9" VerticalAlignment="Bottom" Width="75" Click="BtnEditarINT_Click" Height="24"/>
+                    <Button Content="Cargar INTs" HorizontalAlignment="Left" Margin="10,0,0,9" VerticalAlignment="Bottom" Width="75" Click="ButtonINTs_Click" Height="24"/>
+                    <TextBox x:Name="tbINT" HorizontalAlignment="Right" Height="24" Margin="0,0,92,9" Text="Descripción de INT..." TextWrapping="Wrap" VerticalAlignment="Bottom" Width="235"/>
+                    <ComboBox x:Name="cbMarcas" HorizontalAlignment="Right" Margin="0,0,332,9" VerticalAlignment="Bottom"
+                        Width="317"
+                        SelectedIndex="0" Height="24" DropDownOpened="cbMarcas_DropDownOpened">
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+            
+            
+            <TabItem Name="TabPieza" Header="PIEZA">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,2">
+                    <DataGrid Name="dgPiezas" Margin="10,10,10,38" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*" SelectionChanged="DgPiezas_SelectionChanged" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID PIEZA" Binding="{Binding IdPieza}" MaxWidth="100"/>
+                            <DataGridTextColumn Header="ID INT" Binding="{Binding FK_IdINT}" MaxWidth="100"/>
+                            <DataGridTextColumn Header="CODIGO PIEZA" Binding="{Binding CodigoPieza}" MaxWidth="150"/>
+                            <DataGridTextColumn Header="DESCRIPCION PIEZA" Binding="{Binding DescripcionPieza}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox Name="tbDescPieza" HorizontalAlignment="Right" Height="23" Margin="0,0,90,10" TextWrapping="Wrap" Text="Descripción de Pieza..." VerticalAlignment="Bottom" Width="235"/>
+                    <TextBox Name="tbCodPieza" HorizontalAlignment="Right" Height="23" Margin="0,0,329,10" TextWrapping="Wrap" Text="Código de Pieza..." VerticalAlignment="Bottom" Width="104"/>
+                    <Button Name="btnAgregarPieza" Content="Agregar" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Click="BtnAgregarPieza_Click" Height="23"/>
+                    <ComboBox Name="cbINTs3" HorizontalAlignment="Right" Margin="0,0,438,10" VerticalAlignment="Bottom" Width="184" SelectedIndex="0" Height="23"/>
+                    <Button x:Name="btnBorrarPieza" Content="Borrar" HorizontalAlignment="Left" Margin="94,0,0,10" VerticalAlignment="Bottom" Width="75" Click="BtnBorrarPieza_Click" Height="23"/>
+                    <Button x:Name="btnEditarPieza" Content="Editar" HorizontalAlignment="Left" Margin="174,0,0,10" VerticalAlignment="Bottom" Width="75" Click="BtnEditarPieza_Click" Height="23"/>
+                    <Button x:Name="btnCargarPiezas" Content="Cargar Piezas" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="79" Click="BtnCargarPiezas_Click" Height="23"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TabImage" Header="IMAGEN">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dgPiezasImg" SelectionChanged="DgPiezasImg_SelectionChanged" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Margin="10,10,0,30" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*" HorizontalAlignment="Left" Width="432" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID PIEZA" Binding="{Binding IdPieza}" MaxWidth="60"/>
+                            <DataGridTextColumn Header="ID INT" Binding="{Binding FK_IdINT}" MaxWidth="60"/>
+                            <DataGridTextColumn Header="CODIGO PIEZA" Binding="{Binding CodigoPieza}" MaxWidth="90"/>
+                            <DataGridTextColumn Header="DESCRIPCION PIEZA" Binding="{Binding DescripcionPieza}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Name="btnAsignarImg" Content="Asignar Imagen" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="99" Click="BtnAsignarImg_Click" />
+                    <Button Name="btnBorrarImg" Content="Borrar Imagen" HorizontalAlignment="Right" Margin="0,0,114,5" VerticalAlignment="Bottom" Width="101" Click="BtnBorrarImg_Click"/>
+                    <Button Name="btnCargarPiezasImg" Content="Cargar Piezas" HorizontalAlignment="Right" Margin="0,0,220,5" VerticalAlignment="Bottom" Width="101" Click="BtnCargarPiezasImg_Click"/>
+                    <Image Name="ImageDisplay" MaxHeight="601" Margin="447,10,10,0" VerticalAlignment="Top"/>
+                    <Label Name="tblNADACHE" Margin="477,288,79,0" Content="SELECCIONE UNA PIEZA PARA VER LA IMAGEN ASIGNADA" FontWeight="Bold" Foreground="Red" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label Name="lblbSelectedItemINT" Content="" HorizontalAlignment="Left" Margin="10,611,0,0" VerticalAlignment="Top" Width="432" Height="25" FontSize="11" Padding="1" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="FALLA">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dgFallas" Margin="10,10,10,38" IsReadOnly="True" AutoGenerateColumns="False" SelectionChanged="DgFallas_SelectionChanged" SelectionMode="Single" ColumnWidth="*" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID FALLA" Binding="{Binding IdFalla}" MaxWidth="100"/>
+                            <DataGridTextColumn Header="ID INT" Binding="{Binding FK_IdINT}" MaxWidth="100"/>
+                            <DataGridTextColumn Header="DESCRIPCION FALLA" Binding="{Binding DescripcionFalla}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox Name="tbDescFalla" HorizontalAlignment="Right" Height="23" Margin="0,0,91,10" TextWrapping="Wrap" Text="Descripción de Falla..." VerticalAlignment="Bottom" Width="235" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button Name="btnAgregarFalla" Content="Agregar" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Click="BtnAgregarFalla_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="23"/>
+                    <Button Name="btnBorrarFalla" Content="Borrar" HorizontalAlignment="Left" Margin="170,0,0,10" VerticalAlignment="Bottom" Width="75" Click="BtnBorrarFalla_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="23"/>
+                    <Button Name="btnEditarFalla" Content="Editar" HorizontalAlignment="Left" Margin="90,0,0,10" VerticalAlignment="Bottom" Width="75" Click="BtnEditarFalla_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="23"/>
+                    <ComboBox Name="cbINTs2" HorizontalAlignment="Right" Margin="0,0,331,10" VerticalAlignment="Bottom" Width="184" SelectedIndex="0" Height="23" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button Content="Cargar Fallas" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="75" Click="ButtonFallas_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="23"/>
+                    <Label Content="" MouseDoubleClick="Label_MouseDoubleClick" Margin="0,0,10,10" HorizontalAlignment="Right" Width="24" Height="24" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="REGISTROS">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dgInforme" ClipboardCopyMode="IncludeHeader" SelectionUnit="FullRow" Margin="10,10,143,35" IsReadOnly="True" SelectionMode="Extended" ColumnWidth="*" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" />
+                    <Button Name="btnCopy" Content="Copiar Seleccion" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="115" Click="BtnCopy_Click"/>
+                    <Button Name="btnSelectAll" Content="Seleccionar Todo" HorizontalAlignment="Right" Margin="0,0,130,10" VerticalAlignment="Bottom" Width="129" Click="BtnSelectAll_Click"/>
+                    <Button Name="btnCargarCambios" Content="Cargar Cambios Full" Margin="518,0,264,10" VerticalAlignment="Bottom" Click="BtnCargarCambios_Click"/>
+                    <Button Name="btnCargarCambiosReducidos" Content="Cargar Cambios Reducido" Margin="339,0,0,10" VerticalAlignment="Bottom" Click="BtnCargarCambiosReducidos_Click" HorizontalAlignment="Left" Width="174"/>
+                    <DataGrid Name="dgCantidad" SelectionUnit="FullRow" SelectionMode="Single" Margin="0,10,10,35" HorizontalAlignment="Right" Width="128" ColumnWidth="*" SelectionChanged="DgCantidad_SelectionChanged"/>
+                    <Button Name="btnBorrarRegistro" Content="Borrar registro seleccionado" Margin="10,0,0,10" Click="BtnBorrarRegistro_Click" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="324"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="USUARIOS">
+
+                <Grid Background="#FFE5E5E5">
+
+                    <DataGrid Name="dgUsuarios" Margin="10,10,10,35" ColumnWidth="*" AutoGenerateColumns="False" SelectionUnit="FullRow" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="LEGAJO" Binding="{Binding NumeroLegajo}"/>
+                            <DataGridTextColumn Header="Nº ACCESO" Binding="{Binding NumeroAcceso}"/>
+                            <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}"/>
+                            <DataGridTextColumn Header="APELLIDO" Binding="{Binding Apellido}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnCargarUsuarios" Content="Cargar Lista" HorizontalAlignment="Left" Margin="13,0,0,6" VerticalAlignment="Bottom" Width="120" Click="BtnCargarUsuarios_Click" Height="24" />
+                    <Button x:Name="btnQuitarAccesoUsuario" Content="Quitar Acceso" HorizontalAlignment="Left" Margin="138,0,0,6" VerticalAlignment="Bottom" Width="120" Click="BtnQuitarAccesoUsuario_Click" Height="24" />
+                    <Button x:Name="btnEditarUsuario" Content="Editar Usuario" HorizontalAlignment="Left" Margin="263,0,0,6" VerticalAlignment="Bottom" Width="120" Click="BtnEditarUsuario_Click" Height="24" />
+
+                    <TextBox Name="tbLegajo" Width="50" Height="24" VerticalAlignment="Bottom" MaxLength="4" HorizontalAlignment="Right" Margin="0,0,432,6" Text="Legajo..." VerticalContentAlignment="Center"/>
+                    <TextBox Name="tbAcceso" Width="75" Height="24" VerticalAlignment="Bottom" MaxLength="5" HorizontalAlignment="Right" Margin="0,0,352,6" Text="Nro Acceso..." VerticalContentAlignment="Center"/>
+                    <TextBox Name="tbNombre" Width="120" Height="24" VerticalAlignment="Bottom" MaxLength="30" HorizontalAlignment="Right" Margin="0,0,227,6" Text="Nombre..." VerticalContentAlignment="Center"/>
+                    <TextBox Name="tbApellido" Width="120" Height="24" VerticalAlignment="Bottom" MaxLength="30" HorizontalAlignment="Right" Margin="0,0,102,6" Text="Apellido..." VerticalContentAlignment="Center"/>
+                    <Button Name="btnGuardarNuevoUsuario" Content="Guardar Nuevo" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="87" Height="24" Margin="0,0,10,6" Click="BtnGuardarNuevoUsuario_Click"   />
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+
+    </Grid>
+</Window>

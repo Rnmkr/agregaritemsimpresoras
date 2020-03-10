@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "agregaritemsimpresoras", "agregaritemsimpresoraslocal\agregaritemsimpresoras.csproj", "{880A3A7F-96AE-435E-87A5-E98C3FB68BDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{880A3A7F-96AE-435E-87A5-E98C3FB68BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880A3A7F-96AE-435E-87A5-E98C3FB68BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880A3A7F-96AE-435E-87A5-E98C3FB68BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880A3A7F-96AE-435E-87A5-E98C3FB68BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FA9EDFF-E884-4E91-92FF-563FCD602FCB}
+	EndGlobalSection
+EndGlobal
