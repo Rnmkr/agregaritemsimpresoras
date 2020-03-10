@@ -249,7 +249,9 @@
                     <Button Name="btnCargarPiezasImg" Content="Cargar Piezas" HorizontalAlignment="Right" Margin="0,0,220,5" VerticalAlignment="Bottom" Width="101" Click="BtnCargarPiezasImg_Click"/>
                     <Image Name="ImageDisplay" MaxHeight="601" Margin="447,10,10,0" VerticalAlignment="Top"/>
                     <Label Name="tblNADACHE" Margin="477,288,79,0" Content="SELECCIONE UNA PIEZA PARA VER LA IMAGEN ASIGNADA" FontWeight="Bold" Foreground="Red" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <Label Name="lblbSelectedItemINT" Content="" HorizontalAlignment="Left" Margin="10,611,0,0" VerticalAlignment="Top" Width="432" Height="25" FontSize="11" Padding="1" FontWeight="Bold"/>
+                    <Label Name="lblbSelectedItemINT" Content="" HorizontalAlignment="Left" Margin="10,611,0,0"
+                        VerticalAlignment="Bottom"
+                        Width="432" Height="25" FontSize="11" Padding="1" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
             <TabItem Header="FALLA">
